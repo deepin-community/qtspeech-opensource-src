@@ -1,0 +1,9 @@
+Document: qtspeech5-doc-html
+Title: Qt 5 Speech module
+Author: The Qt Company Ltd
+Abstract: This is the HTML documentation for Qt 5 Speech
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/qtspeech5-doc-html/html/qtspeech/qtspeech-index.html
+Files: /usr/share/doc/qtspeech5-doc-html/html/qtspeech/*.html

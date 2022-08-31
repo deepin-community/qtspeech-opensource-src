@@ -1,0 +1,105 @@
+Source: qtspeech-opensource-src
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Uploaders: Deepin Packages Builder <packages@deepin.org>
+Section: libs
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               flite1-dev,
+               libasound2-dev,
+               libspeechd-dev,
+               pkg-kde-tools,
+               qtbase5-dev (>= 5.15.3~),
+               qtbase5-private-dev (>= 5.15.3~),
+               qtmultimedia5-dev (>= 5.15.3~)
+Build-Depends-Indep: qdoc-qt5 (>= 5.15.3~) <!nodoc>,
+                     qhelpgenerator-qt5 (>= 5.15.3~) <!nodoc>,
+                     qtattributionsscanner-qt5 (>= 5.15.3~) <!nodoc>,
+                     qtbase5-doc-html (>= 5.15.3~) <!nodoc>
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://doc.qt.io/qt-5/qtspeech-index.html
+
+Package: libqt5texttospeech5-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends: libqt5texttospeech5 (= ${binary:Version}),
+         qtbase5-dev,
+         qtdeclarative5-dev,
+         ${misc:Depends}
+Description: Speech library for Qt - development files
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the development files needed to build Qt 5 applications
+ using the QtSpeech library.
+
+Package: libqt5texttospeech5
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Recommends: qtspeech5-speechd-plugin | qtspeech5-flite-plugin
+Description: Speech library for Qt - libraries
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the QtSpeech libraries.
+
+Package: qtspeech5-flite-plugin
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Speech library for Qt - Flite plugin
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the plugin for Flite speech synthesis engine.
+
+Package: qtspeech5-speechd-plugin
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Speech library for Qt - speechd plugin
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the plugin for speechd speech synthesis engine.
+
+Package: qtspeech5-examples
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: Speech library for Qt - Examples
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the QtSpeech examples.
+
+Package: qtspeech5-doc
+Architecture: all
+Build-Profiles: <!nodoc>
+Section: doc
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Speech library for Qt - documentation
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the QCH documentation, which can be viewed in
+ Qt Assistant.
+
+Package: qtspeech5-doc-html
+Architecture: all
+Build-Profiles: <!nodoc>
+Section: doc
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: Speech library for Qt - HTML documentation
+ QtSpeech provides support for text-to-speech and speech recognition in Qt
+ applications.
+ .
+ This package contains the HTML documentation.

@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+DH_VERBOSE = 1
+
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+export QT_SELECT := qt5
+
+%:
+	dh $@ --with pkgkde_symbolshelper
+
+override_dh_auto_configure:
+	dh_auto_configure -- QT_BUILD_PARTS+=tests
+
+override_dh_auto_build-indep:
+	dh_auto_build -- docs
+
+override_dh_auto_install-arch:
+	dh_auto_install
+
+	# Reproducible builds: remove build paths from prl files.
+	sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libQt5TextToSpeech.prl
+
+override_dh_auto_install-indep:
+	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
+
+override_dh_auto_test-arch:
+	dh_auto_test -- -Ctests/auto QT_HASH_SEED=0 QT_QPA_PLATFORM=minimal QTEST_ENVIRONMENT=ubuntu
+
+override_dh_auto_test-indep:
