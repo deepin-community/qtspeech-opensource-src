@@ -1,5 +1,5 @@
-usr/include/*/qt5/QtTextToSpeech/5.*
-usr/lib/*/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechEngineFlite.cmake
-usr/lib/*/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechPluginSpeechd.cmake
+usr/include/${DEB_HOST_MULTIARCH}/qt5/QtTextToSpeech/5.*
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechEngineFlite.cmake
+usr/lib/${DEB_HOST_MULTIARCH}/cmake/Qt5TextToSpeech/Qt5TextToSpeech_QTextToSpeechPluginSpeechd.cmake
 usr/lib/${DEB_HOST_MULTIARCH}/libQt5TextToSpeech.la
 usr/lib/${DEB_HOST_MULTIARCH}/qt5/mkspecs/modules/qt_lib_texttospeech_private.pri

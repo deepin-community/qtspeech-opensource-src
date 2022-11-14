@@ -18,7 +18,7 @@ libQt5TextToSpeech.so.5 libqt5texttospeech5 #MINVER#
  Qt_5.8@Qt_5.8 5.9.0~rc2
  Qt_5.9@Qt_5.9 5.9.0~rc2
  Qt_5@Qt_5 5.8.0~alpha
- Qt_5_PRIVATE_API@Qt_5_PRIVATE_API 5.8.0~alpha
+ (symver)Qt_5_PRIVATE_API 0
  _ZN13QTextToSpeech11qt_metacallEN11QMetaObject4CallEiPPv@Qt_5 5.8.0~alpha
  _ZN13QTextToSpeech11qt_metacastEPKc@Qt_5 5.8.0~alpha
  _ZN13QTextToSpeech11rateChangedEd@Qt_5 5.8.0~alpha
