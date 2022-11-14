@@ -1,1 +1,1 @@
-usr/lib/*/qt5/plugins/texttospeech/libqtexttospeech_speechd.so
+usr/lib/${DEB_HOST_MULTIARCH}/qt5/plugins/texttospeech/libqtexttospeech_speechd.so
